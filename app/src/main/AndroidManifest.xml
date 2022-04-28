@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dbts">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DBTS">
+        <activity
+            android:name=".RouteSelection"
+            android:parentActivityName=".Signup"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DBTS.GetStarted"
+            android:exported="false" />
+        <activity
+            android:name=".account_verification"
+            android:exported="false"
+            android:parentActivityName=".Signup"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DBTS.GetStarted" />
+        <activity
+            android:name=".Signin"
+            android:exported="false"
+            android:parentActivityName=".Signin"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DBTS.GetStarted" />
+        <activity
+            android:name=".Signup"
+            android:exported="false"
+            android:parentActivityName=".GetStarted"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DBTS.GetStarted" />
+        <activity
+            android:name=".GetStarted"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DBTS.GetStarted">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

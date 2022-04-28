@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DBTS</string>
+    <string name="Signin_Line"><![CDATA[Enter your registered email or student ID\n & password to Sign-in.]]></string>
+    <string name="Signup_Line"><![CDATA[Fill name - email - student ID - password\n & verify your email for get access]]></string>
+    <string name="Pl_signup">Please Sign up for the services\n of DCE buses</string>
+    <string name="Pl_signin">Please Sign in for the services\n of DCE buses</string>
+    <string name="Name">Full Name</string>
+    <string name="AccountVerificationLine">We sent a Verification code to your email. Please put the correct code to continue</string>
+    <string name="RouteSelectionLine">By selecting your route, every day you will get update of bus location on your route. \nNote: You can change your route any time</string>
+</resources>

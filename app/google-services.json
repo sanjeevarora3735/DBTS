@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "899485544625",
+    "project_id": "dbts-f8889",
+    "storage_bucket": "dbts-f8889.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899485544625:android:19d90b2b72d6711973f290",
+        "android_client_info": {
+          "package_name": "com.rws.DBTS"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "899485544625-d0mgv9u0kp9jcacaembvoslasdin0fvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-h4iYGcTbO3WKICLD4kmy-a-xXDrn1kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "899485544625-d0mgv9u0kp9jcacaembvoslasdin0fvq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
