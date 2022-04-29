@@ -12,6 +12,9 @@ public class GetStarted extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
+//        Testing Purpose @ Smile :::::::::::::::::    0000    :::::::::::::::::
+//        startActivity(new Intent(GetStarted.this,locationRequest.class));
+
         GetStarted = findViewById(R.id.GetStartedButton); // Fetch Button From XML File
         GetStarted.setOnClickListener(v -> {
             // Navigation to Signup Activity

@@ -131,6 +131,7 @@
             app:boxCornerRadiusTopEnd="20dp"
             app:boxCornerRadiusTopStart="20dp"
             app:boxStrokeColor="@color/NonActivatedButtonColor"
+            app:errorEnabled="false"
             app:hintTextColor="@color/TagLineColor"
             app:startIconDrawable="@drawable/full_name">
 
@@ -138,6 +139,7 @@
                 android:id="@+id/FullNameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:capitalize="words"
                 android:inputType="textCapWords"
                 android:singleLine="true" />
 
@@ -179,6 +181,7 @@
             app:boxCornerRadiusTopEnd="20dp"
             app:boxCornerRadiusTopStart="20dp"
             app:boxStrokeColor="@color/NonActivatedButtonColor"
+            app:errorEnabled="false"
             app:hintTextColor="@color/TagLineColor"
             app:startIconDrawable="@drawable/email">
 

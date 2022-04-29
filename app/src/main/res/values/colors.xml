@@ -11,6 +11,7 @@
     <color name="GetStartedButton">#24204d</color>
     <color name="ActivatedButton">#00c89b</color>
     <color name="ActivatedRoute">#26d0aa</color>
+    <color name="dbtsBrandColor">#5792a9</color>
     <color name="NonActivatedButtonColor">#f7f7f7</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#6AB4B4C5</color>
 

@@ -38,11 +38,12 @@
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="75dp"
-                    android:layout_marginStart="25dp"
+                    android:layout_marginRight="25dp"
                     android:contentDescription="@string/app_name"
                     android:padding="10dp"
                     android:src="@drawable/in_app_logo"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -105,6 +106,7 @@
             app:boxCornerRadiusTopEnd="5dp"
             app:boxCornerRadiusTopStart="5dp"
             app:boxStrokeColor="@color/NonActivatedButtonColor"
+            app:errorEnabled="false"
             app:hintTextColor="@color/TagLineColor">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -210,12 +212,22 @@
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/ErrorDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="?attr/colorError"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout_OTPSet" />
+
     <Button
         android:id="@+id/ContinueButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:layout_marginTop="50dp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/GetStartedButton"
         android:padding="15dp"
@@ -224,9 +236,10 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ErrorDisplay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LinearLayout_OTPSet" />
+        tools:layout_editor_absoluteY="418dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
