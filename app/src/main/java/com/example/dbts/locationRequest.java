@@ -103,21 +103,23 @@ public class locationRequest extends AppCompatActivity {
                 },MY_PERMISSION_REQUEST_CODE);
             }
         }else {
-            startActivity(new Intent(locationRequest.this,SampleDashBoard.class));
+            startActivity(new Intent(locationRequest.this,Dashboard.class));
             Toast.makeText(this, "Permissions are already Granted !", Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if(requestCode == MY_PERMISSION_REQUEST_CODE){
-            if((grantResults.length>0) && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                startActivity(new Intent(locationRequest.this,SampleDashBoard.class));
+        if (requestCode == MY_PERMISSION_REQUEST_CODE) {
+            if ((grantResults.length > 0) && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                startActivity(new Intent(locationRequest.this, Dashboard.class));
                 Toast.makeText(getApplicationContext(), "Permissions are Granted @", Toast.LENGTH_SHORT).show();
-            }else {
+            } else {
                 Toast.makeText(getApplicationContext(), "Permission are Denied @", Toast.LENGTH_SHORT).show();
                 RequestPermissionsFromUser();
             }
+        }else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 

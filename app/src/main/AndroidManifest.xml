@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dbts">
-    <!--  Location Permission For Background Purpose @ Continuity   -->
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-    <!-- Always include this permission -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- Reuired Permission For Internet   -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- Include only if your app benefits from precise location access. -->
+    <!-- Location Permission For Background Purpose @ Continuity -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- Always include this permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Reuired Permission For Internet -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Include only if your app benefits from precise location access. -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DBTS">
+        <activity
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DBTS.GetStarted"
+            android:parentActivityName=".Dashboard"
+            android:name=".Dashboard"
+            android:exported="false" />
         <activity
             android:name=".locationRequest"
             android:exported="false"

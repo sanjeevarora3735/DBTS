@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">[College Bus] Trekr</string>
+    <string name="app_name">DBTS Trekr</string>
     <string name="Signin_Line"><![CDATA[Enter your registered email or student ID\n & password to Sign-in.]]></string>
     <string name="Signup_Line"><![CDATA[Fill name - email - student ID - password\n & verify your email for get access]]></string>
     <string name="Pl_signup">Please Sign up for the services\n of DCE buses</string>
@@ -12,4 +12,6 @@
     <string name="LocationRequestTagLine">If you don\'t on your location , you will not able to see how far your bus from you</string>
     <string name="CodeBlankError">Code is required to proceed.</string>
     <string name="CodeWrongError">Please enter the correct code..</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

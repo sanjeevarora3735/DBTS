@@ -137,6 +137,7 @@
             app:startIconDrawable="@drawable/email">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EmailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textEmailAddress"
@@ -162,6 +163,7 @@
             app:startIconDrawable="@drawable/password">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PasswordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"

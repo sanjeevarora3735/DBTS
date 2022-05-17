@@ -1,6 +1,7 @@
 package com.example.dbts;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +13,10 @@ public class GetStarted extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
 //        Testing Purpose @ Smile :::::::::::::::::    0000    :::::::::::::::::
-//        startActivity(new Intent(GetStarted.this,locationRequest.class));
+//        startActivity(new Intent(GetStarted.this,Dashboard.class));
 
         GetStarted = findViewById(R.id.GetStartedButton); // Fetch Button From XML File
         GetStarted.setOnClickListener(v -> {
