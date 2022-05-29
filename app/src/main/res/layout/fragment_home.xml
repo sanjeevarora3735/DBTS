@@ -1,72 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FrameLayout_Home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/FrameLayout_Home"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:theme="@style/Theme.DBTS.GetStarted"
     tools:context=".HomeFragment">
 
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/AppBarLayout"
+    <LinearLayout
+        android:id="@+id/SecondaryConstraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:elevation="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/ToolBar"
+        android:theme="@style/Theme.MaterialComponents.Light">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/AppBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:minHeight="?actionBarSize"
-            android:scrollbarAlwaysDrawVerticalTrack="true"
-            android:theme="@style/AppTheme.PopupOverlay"
-            android:paddingStart="0dp"
-            app:elevation="0dp">
+            app:elevation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/ToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="?actionBarSize"
+                android:paddingStart="0dp"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:theme="@style/AppTheme.PopupOverlay"
+                app:elevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/College_University_Logo"
+                        android:layout_width="250dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="-40dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:cropToPadding="true"
+                        android:padding="10dp"
+                        android:src="@drawable/in_app_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/SideBar"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/white"
+                        android:src="@drawable/bars"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/circularRevealCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+
+                android:layout_marginTop="?actionBarSize"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@color/CardView"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="#00c89b"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00c89b"
+                    android:padding="0dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/BusRouteTextInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/cornerradius_cardview"
+                        app:boxBackgroundMode="filled"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@color/CardView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:startIconDrawable="@drawable/bus_front">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/BusRouteAutoCompleteTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:dropDownHeight="150dp"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:text="Route No. 1"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/Nextbustime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/cornerradius_textview"
+                        android:backgroundTintMode="multiply"
+                        android:elevation="2dp"
+                        android:padding="6dp"
+                        android:text="Next bus time"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="@+id/BusRouteTextInputLayout"
+                        app:layout_constraintTop_toBottomOf="@id/BusRouteTextInputLayout" />
+
+                    <TextView
+                        android:id="@+id/originToCampus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Origin to Campus"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toTopOf="@+id/CampustoOrigin"
+                        app:layout_constraintStart_toStartOf="@+id/Nextbustime"
+                        app:layout_constraintTop_toBottomOf="@+id/Nextbustime" />
+
+                    <TextView
+                        android:id="@+id/CampustoOrigin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Campus to Origin"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/Nextbustime"
+                        app:layout_constraintTop_toBottomOf="@+id/Nextbustime" />
+
+                    <TextView
+                        android:id="@+id/originToCampusTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="06:00 AM"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/CampustoOriginTime"
+                        app:layout_constraintEnd_toEndOf="@+id/BusRouteTextInputLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/Nextbustime" />
+
+                    <TextView
+                        android:id="@+id/CampustoOriginTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="03:00 PM"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/BusRouteTextInputLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/Nextbustime" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/ViewBusSchedules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/ScheduleButtonColor"
+                android:padding="15dp"
+                android:text="View Bus Schedules"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                app:cornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/circularRevealCardView" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="400dp"
+                android:layout_marginBottom="?actionBarSize"
+                android:orientation="vertical"
+                android:padding="20dp">
 
-                <ImageView
-                    android:id="@+id/College_University_Logo"
-                    android:layout_width="250dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="-40dp"
-                    android:contentDescription="@string/app_name"
-                    android:padding="10dp"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="true"
-                    android:src="@drawable/in_app_logo"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageButton
-                    android:id="@+id/SideBar"
-                    android:layout_width="30dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/white"
-                    android:src="@drawable/bars"
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/MapCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cornerradius_textview"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constrainedHeight="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth=".51dp">
 
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.mapbox.mapboxsdk.maps.MapView
+                            android:id="@+id/MapViewInstance"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <TextView
+                    android:id="@+id/BusRouteTextViewMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Route 1 Map"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:translationZ="1dp"
+                    android:alpha=".9"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/textview_map"
+                    app:layout_constraintStart_toStartOf="@id/MapCard"
+                    app:layout_constraintTop_toTopOf="@id/MapCard" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:src="@drawable/ic_baseline_track"
+                    android:tooltipText="Tap To Track"
+                    app:borderWidth="0dp"
+                    app:fabSize="auto"
+                    app:layout_constraintBottom_toBottomOf="@+id/MapCard"
+                    app:layout_constraintEnd_toEndOf="@+id/MapCard" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

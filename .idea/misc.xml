@@ -3,18 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable-v24/cornerradius_cardview.xml" value="0.1" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable-v24/cornerradius_textview.xml" value="0.1" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/activated_rounded_button.xml" value="0.6666666666666666" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/arrow_back.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/bars.xml" value="0.1315" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/bus_front.xml" value="0.1" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/cornerradius_cardview.xml" value="0.138" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/cornerradius_dropdownmenu.xml" value="0.1" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/cornerradius_textview.xml" value="0.138" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/full_name.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/home.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/home_icon.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/home_outlined.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/home_selected_icon.xml" value="0.131" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/ic_baseline_track.xml" value="0.1" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/nonactivated_rounded_button.xml" value="0.6666666666666666" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/notification_bell.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/notificationbell_icon.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/notificationbell_selected_icon.xml" value="0.128" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/onlystroke.xml" value="0.1165" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/person_icon.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/person_outline.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/profile_icon.xml" value="0.131" />
@@ -23,14 +31,22 @@
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/round_notification_back_100.xml" value="0.131" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/round_profile_back_100.xml" value="0.131" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/round_schedule_back_100.xml" value="0.131" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/round_textview.xml" value="0.1165" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/rounded_button.xml" value="0.1" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/route_selected.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/route_selector.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/schedule.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/schedule_icon.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/schedule_selected_icon.xml" value="0.131" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/schedule_stoppagepoint.xml" value="0.1" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/schedule_timmings.xml" value="0.1725" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/textinputlayout_corners.xml" value="0.1" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/textview_map.xml" value="0.1" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/drawable/textviewradius.xml" value="0.1" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.21360544217687075" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.12265625" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/activity_account_verification.xml" value="0.3235747303543914" />
-        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/activity_dashborad.xml" value="0.41045751633986927" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/activity_dashborad.xml" value="0.33182844243792325" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/activity_get_started.xml" value="0.22" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/activity_location_request.xml" value="0.22" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/activity_main.xml" value="0.15104166666666666" />
@@ -38,10 +54,14 @@
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/activity_sample_dash_board.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/activity_signin.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/activity_signup.xml" value="0.16354166666666667" />
-        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/fragment_home.xml" value="0.24026696329254726" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/activity_stoppage_points.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/content_scrolling.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/dropdown_routes.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/fragment_home.xml" value="0.21852731591448932" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/fragment_notification.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/fragment_profile.xml" value="0.16354166666666667" />
-        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/fragment_schedule.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/layout/fragment_schedule.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/menu/menu_stoppage_points.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/menu/menu_toolbar.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.128" />
         <entry key="..\:/Users/sanjeev/AndroidStudioProjects/DBTS/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.128" />

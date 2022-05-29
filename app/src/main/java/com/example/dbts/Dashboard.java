@@ -39,6 +39,7 @@ public class Dashboard extends AppCompatActivity {
         final TextView NotificationLayoutTextView = findViewById(R.id.NotificationLayoutTextView);
         final TextView ProfileLayoutTextView = findViewById(R.id.ProfileLayoutTextView);
 
+
         getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
                 .replace(R.id.FragmentTabHost,HomeFragment.class,null)

@@ -25,7 +25,9 @@
     <color name="schedule">#ffffff</color>
     <color name="notification">#ffffff</color>
     <color name="profile">#ffffff</color>
-<!--    <color name="home">#1194AA</color>-->
+    <color name="ScheduleButtonColor">#8d7ffc</color>
+
+    <!--    <color name="home">#1194AA</color>-->
 <!--    <color name="schedule">#C9379D</color>-->
 <!--    <color name="notification">#AE7E0F</color>-->
 <!--    <color name="profile">#5B37B7</color>-->
@@ -36,5 +38,7 @@
     <color name="schedule_20">#33C9379D</color>
     <color name="notification_20">#33AE7E0F</color>
     <color name="profile_20">#335B37B7</color>
+    <color name="CardView">#00c89b</color>
+    <color name="CardView_TextView">#26d0aa</color>
 
 </resources>

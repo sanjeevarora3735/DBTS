@@ -16,7 +16,7 @@ public class GetStarted extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
 //        Testing Purpose @ Smile :::::::::::::::::    0000    :::::::::::::::::
-//        startActivity(new Intent(GetStarted.this,Dashboard.class));
+        startActivity(new Intent(GetStarted.this,StoppagePoints.class));
 
         GetStarted = findViewById(R.id.GetStartedButton); // Fetch Button From XML File
         GetStarted.setOnClickListener(v -> {

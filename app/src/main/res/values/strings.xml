@@ -14,4 +14,27 @@
     <string name="CodeWrongError">Please enter the correct code..</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="MapBoxAccessTokenSecret">sk.eyJ1Ijoic2FuamVldmFyb3JhIiwiYSI6ImNsM2Z2dWlrMTA4eXgzY3Q1OHhxanNpYm8ifQ.PMHASB2m18olKNsuuagp9Q</string>
+    <string name="MapBoxAccessTokenPublic">pk.eyJ1Ijoic2FuamVldmFyb3JhIiwiYSI6ImNsM2ZsMmplNDB0OGszbHByaDBraHp1ODUifQ.uqhq87KVnUvWjKf67XV8uw</string>
+    <!-- TODO: Routes Lists For The College Buses -->
+    <string-array name="Routes">
+        <item>Route No. 1</item>
+        <item>Route No. 2</item>
+        <item>Route No. 3</item>
+        <item>Route No. 4</item>
+        <item>Route No. 5</item>
+        <item>Route No. 6</item>
+    </string-array>
+
+
+    <string-array name="RoutesShort">
+        <item>Route 1</item>
+        <item>Route 2</item>
+        <item>Route 3</item>
+        <item>Route 4</item>
+        <item>Route 5</item>
+        <item>Route 6</item>
+    </string-array>
+
 </resources>

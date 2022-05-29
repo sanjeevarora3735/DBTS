@@ -25,12 +25,12 @@ import com.google.android.gms.location.LocationServices;
 import java.util.ArrayList;
 
 public class locationRequest extends AppCompatActivity {
-    private static final int MY_PERMISSION_REQUEST_CODE = 123;
-    private int i = 0;
+    protected static final int MY_PERMISSION_REQUEST_CODE = 123;
+    protected int i = 0;
     // Top Declaration Block For All Elements & Members
     Toolbar toolbar;
     Button TurnonLocation;
-    private FusedLocationProviderClient mFusedLocationProviderClient;
+    protected FusedLocationProviderClient mFusedLocationProviderClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

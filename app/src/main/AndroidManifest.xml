@@ -3,7 +3,7 @@
     package="com.example.dbts">
     <!-- Location Permission For Background Purpose @ Continuity -->
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- Always include this permission -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Reuired Permission For Internet -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Required Permission For Internet -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- Include only if your app benefits from precise location access. -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -15,11 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DBTS">
         <activity
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.DBTS.GetStarted"
-            android:parentActivityName=".Dashboard"
             android:name=".Dashboard"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DBTS.GetStarted" />
         <activity
             android:name=".locationRequest"
             android:exported="false"
@@ -61,6 +61,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
