@@ -110,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Notification"
+                android:text="Messages"
                 android:textColor="@color/BottomNavigationText"
                 android:textSize="16sp" />
         </LinearLayout>

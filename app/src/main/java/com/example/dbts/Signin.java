@@ -45,28 +45,35 @@ public class Signin extends AppCompatActivity {
             startActivity(new Intent(Signin.this, Signup.class));
         });
         SigninContinue.setOnClickListener(v -> {
+//            if(EmailAddressEditText.getText().toString().trim() != "")
             SigninWithEmailandPassword(EmailAddressEditText.getText().toString().trim().toLowerCase(),PasswordEditText.getText().toString().trim().toLowerCase());
+//            SigninWithEmailandPassword("sanjeevarora.developer@gmail.com","Lenovo00!");
             startActivity(new Intent(getApplicationContext(), Dashboard.class));
         });
     }
 
-    private void SigninWithEmailandPassword(String email, String password) {
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Toast.makeText(getApplicationContext(), "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            updateUI(null);
+
+    protected void SigninWithEmailandPassword(String email, String password) {
+
+        try {
+            mAuth.signInWithEmailAndPassword("sanjeevarora3735@gmail.com", "Lenovo00!")
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                updateUI(user);
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Toast.makeText(getApplicationContext(), "Authentication failed. Error "+ task.getException().getMessage(),
+                                        Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                });
+                    });
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -79,16 +86,21 @@ public class Signin extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            updateUI(currentUser);
-        }
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        if (currentUser != null) {
+//            Toast.makeText(this, "There is someone ...", Toast.LENGTH_SHORT).show();
+//            updateUI(currentUser);
+//        }else{
+//            Toast.makeText(this, "No one is there ...", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     private void updateUI(FirebaseUser currFirebaseUser) {
-        Intent UpdateUI = new Intent(Signin.this,Dashboard.class);
+        if (currFirebaseUser != null) {
+            Intent UpdateUI = new Intent(Signin.this, Dashboard.class);
 //        UpdateUI.putExtra("CurrentUserObject", (Bundle) o);
-        startActivity(UpdateUI);
-        Toast.makeText(getApplicationContext(), currFirebaseUser.getEmail().toString(), Toast.LENGTH_SHORT).show();
+            startActivity(UpdateUI);
+            Toast.makeText(getApplicationContext(), currFirebaseUser.getEmail().toString(), Toast.LENGTH_SHORT).show();
+        }
     }
 }

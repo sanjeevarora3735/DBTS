@@ -4,66 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/MainPurple"
     android:theme="@style/Theme.DBTS.GetStarted"
     tools:context=".GetStarted">
 
+
     <ImageView
-        android:id="@+id/AppBrandBusLogo"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
-        android:layout_height="400dp"
-        android:padding="10dp"
-        android:src="@drawable/bus_logo"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bus" />
+
+    <TextView
+        android:id="@+id/Main_Heading"
+        android:layout_width="337dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bevan"
+        android:text="@string/college_bus"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
-        android:id="@+id/College_University_Name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:fontFamily="sans-serif"
-        android:text="Dronacharya College of Engr.\n Bus Tracking App"
+        android:id="@+id/Desc_Line"
+        android:layout_width="358dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:text="Tracking of your child and bus during travelling in college bus "
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        android:textStyle="bold"
+        android:textColor="#A9AABE"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AppBrandBusLogo" />
-
-    <TextView
-        android:id="@+id/AppBrandTagLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:fontFamily="sans-serif"
-        android:text="Getting your day to day bus tracking updates is now just a matter of some clicks!"
-        android:textAlignment="center"
-        android:textColor="@color/TagLineColor"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/College_University_Name" />
+        app:layout_constraintTop_toBottomOf="@+id/Main_Heading" />
 
     <Button
-        android:id="@+id/GetStartedButton"
-        android:layout_width="match_parent"
+        android:id="@+id/TrackYourChild"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="18dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#FF9859"
+        android:padding="10dp"
         android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/GetStartedButton"
-        android:padding="15dp"
-        android:text="Get Started"
-        android:textAlignment="center"
-        android:textAllCaps="false"
+        android:text=" TRACK YOUR CHILD "
         android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AppBrandTagLine" />
+        app:layout_constraintTop_toBottomOf="@+id/Desc_Line" />
 
+    <TextView
+        android:id="@+id/Signup_Link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:text="New User ?  Sign up"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TrackYourChild" />
 </androidx.constraintlayout.widget.ConstraintLayout>

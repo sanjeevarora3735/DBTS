@@ -1,18 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ActiveBusStoppagePointName"
+    android:theme="@style/Theme.DBTS.GetStarted"
     tools:context=".NotificationFragment">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white"
+            android:minHeight="?actionBarSize"
+            android:paddingStart="0dp"
+            android:theme="@style/AppTheme.PopupOverlay"
+            app:elevation="0dp"
+            app:logo="@drawable/arrow_back">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleImageView"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/profile_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="10dp"
+                    android:text="DBTS [ College Name ]"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circleImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/SideBar"
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_more_vert_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:fontFamily="cursive"
-        android:text="Notification Fragment"
-        android:textSize="30dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
+        android:layout_marginTop="?actionBarSize">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/NavigateBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/white"
+            android:clickable="true"
+            android:gravity="bottom|right"
+            android:src="@drawable/ic_outline_expand_circle_down_24"
+            android:tooltipText="Tap To Track"
+            android:visibility="gone"
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/MessagePanelScrollView"
+            app:layout_constraintEnd_toEndOf="@+id/MessagePanelScrollView" />
+
+        <ScrollView
+            android:id="@+id/MessagePanelScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/MessagePanel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -17,6 +17,8 @@
 
     <string name="MapBoxAccessTokenSecret">sk.eyJ1Ijoic2FuamVldmFyb3JhIiwiYSI6ImNsM2Z2dWlrMTA4eXgzY3Q1OHhxanNpYm8ifQ.PMHASB2m18olKNsuuagp9Q</string>
     <string name="MapBoxAccessTokenPublic">pk.eyJ1Ijoic2FuamVldmFyb3JhIiwiYSI6ImNsM2ZsMmplNDB0OGszbHByaDBraHp1ODUifQ.uqhq87KVnUvWjKf67XV8uw</string>
+    <string name="college_bus">College Bus</string>
+    <string name="mini_map">Mini Map</string>
     <!-- TODO: Routes Lists For The College Buses -->
     <string-array name="Routes">
         <item>Route No. 1</item>

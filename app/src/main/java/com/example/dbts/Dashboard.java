@@ -11,6 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.view.menu.ShowableListMenu;
+import androidx.fragment.app.Fragment;
 
 public class Dashboard extends AppCompatActivity {
 
@@ -20,6 +23,14 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashborad);
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+
+        final Fragment HomeFragment = new HomeFragment();
+        final Fragment ScheduleFragment = new ScheduleFragment();
+        final Fragment NotificationFragment = new NotificationFragment();
+        final Fragment ProfileFragment = new ProfileFragment();
+        Fragment ActiveFragment = HomeFragment;
 
         // FindViewByID @ LinearLayouts :: 1 To 4
         final LinearLayout HomeLayout = findViewById(R.id.HomeLayout);
@@ -42,21 +53,18 @@ public class Dashboard extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
-                .replace(R.id.FragmentTabHost,HomeFragment.class,null)
+                .replace(R.id.FragmentTabHost, HomeFragment.class,null)
+                .addToBackStack("HomeLayout")
                 .commit();
 
-//        Intent CurrentUser = getIntent();
-//        Object o = CurrentUser.getBundleExtra("CurrentUserObject");
-//        Toast.makeText(getApplicationContext(), o.toString(), Toast.LENGTH_SHORT).show();
         HomeLayout.setOnClickListener(v -> {
 
             if(SelectedTab != 1){
 
                 getSupportFragmentManager().beginTransaction()
-                        .setReorderingAllowed(true)
+                        .addToBackStack("HomeLayout")
                         .replace(R.id.FragmentTabHost,HomeFragment.class,null)
                         .commit();
-
                 ScheduleLayoutTextView.setVisibility(View.GONE);
                 ProfileLayoutTextView.setVisibility(View.GONE);
                 NotificationLayoutTextView.setVisibility(View.GONE);
@@ -87,8 +95,9 @@ public class Dashboard extends AppCompatActivity {
 
             if(SelectedTab != 2){
 
+
                 getSupportFragmentManager().beginTransaction()
-                        .setReorderingAllowed(true)
+                        .addToBackStack("ScheduleLayout")
                         .replace(R.id.FragmentTabHost,ScheduleFragment.class,null)
                         .commit();
 
@@ -123,8 +132,8 @@ public class Dashboard extends AppCompatActivity {
             if(SelectedTab != 3){
 
                 getSupportFragmentManager().beginTransaction()
-                        .setReorderingAllowed(true)
                         .replace(R.id.FragmentTabHost,NotificationFragment.class,null)
+                        .addToBackStack("NotificationLayout")
                         .commit();
 
                 HomeLayoutTextView.setVisibility(View.GONE);
@@ -159,8 +168,8 @@ public class Dashboard extends AppCompatActivity {
 
 
                 getSupportFragmentManager().beginTransaction()
-                        .setReorderingAllowed(true)
                         .replace(R.id.FragmentTabHost,ProfileFragment.class,null)
+                        .addToBackStack("ProfileLayout")
                         .commit();
 
                 HomeLayoutTextView.setVisibility(View.GONE);

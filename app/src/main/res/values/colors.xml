@@ -13,6 +13,8 @@
     <color name="ActivatedRoute">#26d0aa</color>
     <color name="dbtsBrandColor">#5792a9</color>
     <color name="NonActivatedButtonColor">#f7f7f7</color>
+    <color name="MainPurple">#2F304E</color>
+
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#6AB4B4C5</color>
     <color name="LightColorVectors">#000000</color>
 
@@ -21,24 +23,25 @@
     <color name="BottomNavigationBack">#eceaff</color>
 
     <!--    For Fragment Background Color & Etc..-->
-    <color name="home">#ffffff</color>
-    <color name="schedule">#ffffff</color>
-    <color name="notification">#ffffff</color>
-    <color name="profile">#ffffff</color>
+<!--    <color name="home">#ffffff</color>-->
+<!--    <color name="schedule">#ffffff</color>-->
+<!--    <color name="notification">#ffffff</color>-->
+<!--    <color name="profile">#ffffff</color>-->
     <color name="ScheduleButtonColor">#8d7ffc</color>
-
-    <!--    <color name="home">#1194AA</color>-->
-<!--    <color name="schedule">#C9379D</color>-->
-<!--    <color name="notification">#AE7E0F</color>-->
-<!--    <color name="profile">#5B37B7</color>-->
+<!---->
+        <color name="home">#1194AA</color>
+        <color name="schedule">#C9379D</color>
+        <color name="notification">#AE7E0F</color>
+        <color name="profile">#5B37B7</color>
 
     <!-- For Multi Color Text-->
-
-    <color name="home_20">#331194AA</color>
-    <color name="schedule_20">#33C9379D</color>
-    <color name="notification_20">#33AE7E0F</color>
-    <color name="profile_20">#335B37B7</color>
+    <color name="home_20">#1194AA</color>
+    <color name="schedule_20">#C9379D</color>
+    <color name="notification_20">#AE7E0F</color>
+    <color name="profile_20">#5B37B7</color>
     <color name="CardView">#00c89b</color>
+    <color name="Campus">#39FDD835</color>
     <color name="CardView_TextView">#26d0aa</color>
+    <color name="ActiveBusStoppagePointName">#f7f7f7</color>
 
 </resources>

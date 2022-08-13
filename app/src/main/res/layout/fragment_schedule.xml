@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -96,58 +97,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ViewBusStoppage">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:id="@+id/PurpleConstraintLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="5dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:layout_editor_absoluteX="0dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
-                        android:text="29 May 2022"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/BusRouteAutoCompleteTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/activated_rounded_button"
-                    android:text="Route No. 1"
-                    android:textColor="@color/white"
-                    android:layout_margin="15dp"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="15dp"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:drawableStart="@drawable/ic_sharp_directions_bus_24"
-                    android:drawableTint="#D0FFFFFF"
-                    android:drawablePadding="10dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/PurpleConstraintLayout"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -162,6 +111,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/ScheduleLayout_StoppagePoints">
 
                 <TextView
+                    android:id="@+id/NavigatingTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Moti Bagh To Campus"
@@ -171,113 +121,16 @@
                     android:background="@drawable/round_textview"
                     android:fontFamily="sans-serif-condensed"/>
 
-                <LinearLayout
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/GridLayoutSchedule"
-                        android:background="@drawable/onlystroke"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/StoppagePointLinearLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/BusTiming"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="22dp"
-                            android:layout_marginStart="10dp"
-                            android:text="07:00 AM"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toTopOf="@id/GridLayoutSchedule"
-                            app:layout_constraintStart_toStartOf="@id/GridLayoutSchedule"/>
-
-                        <TextView
-                            android:id="@+id/BusNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:text="HR-55-4234"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toTopOf="@id/GridLayoutSchedule"
-                            app:layout_constraintEnd_toEndOf="@id/GridLayoutSchedule"/>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/GridLayoutSchedule1"
-                        android:background="#f7f7f7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/BusTiming1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="22dp"
-                            android:textStyle="bold"
-                            android:layout_marginStart="10dp"
-                            android:text="08:00 AM"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toTopOf="@id/GridLayoutSchedule1"
-                            app:layout_constraintStart_toStartOf="@id/GridLayoutSchedule1"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="  (Active)"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/BusTiming1"
-                            app:layout_constraintTop_toTopOf="parent" />
-                        <TextView
-                            android:id="@+id/BusNumber1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:text="HR-55-4235"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toTopOf="@id/GridLayoutSchedule1"
-                            app:layout_constraintEnd_toEndOf="@id/GridLayoutSchedule1"/>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/GridLayoutSchedule2"
-                        android:background="@drawable/onlystroke"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/BusTiming2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="22dp"
-                            android:layout_marginStart="10dp"
-                            android:text="09:00 AM"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toTopOf="@id/GridLayoutSchedule2"
-                            app:layout_constraintStart_toStartOf="@id/GridLayoutSchedule2"/>
-
-                        <TextView
-                            android:id="@+id/BusNumber2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:text="HR-55-4232"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toTopOf="@id/GridLayoutSchedule2"
-                            app:layout_constraintEnd_toEndOf="@id/GridLayoutSchedule2"/>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                    </LinearLayout>
+                </ScrollView>
 
 
                 <TextView
