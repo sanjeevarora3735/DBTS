@@ -110,16 +110,41 @@
                 app:layout_constraintStart_toStartOf="@id/ScheduleLayout_StoppagePoints"
                 app:layout_constraintTop_toBottomOf="@+id/ScheduleLayout_StoppagePoints">
 
-                <TextView
-                    android:id="@+id/NavigatingTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Moti Bagh To Campus"
-                    android:textColor="@color/black"
-                    android:padding="10dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/round_textview"
-                    android:fontFamily="sans-serif-condensed"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/NavigatingTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/round_textview"
+                        android:fontFamily="sans-serif-condensed"
+                        android:padding="10dp"
+                        android:text="Moti Bagh To Campus"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/BusStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:drawableStart="@drawable/ic_sharp_timer_24"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="#E53935"
+                        android:fontFamily="sans-serif-condensed"
+                        android:padding="10dp"
+                        android:textSize="15dp"
+                        android:text="15 Min Late"
+                        android:textColor="#E53935"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <ScrollView
                     android:layout_width="match_parent"

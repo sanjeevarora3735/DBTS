@@ -17,6 +17,7 @@
         android:theme="@style/Theme.DBTS">
         <activity
             android:name=".Dashboard"
+            android:parentActivityName=".Dashboard"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.DBTS.GetStarted">

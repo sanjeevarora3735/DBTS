@@ -112,6 +112,7 @@ public class NotificationFragment extends Fragment {
         GenerateTextView("DATE", null);
         String Message = "You joined using this server's invite link";
         GenerateTextView("JOINING", Message);
+        NavigateBottom.performClick();
     }
 
     private void GenerateTextView(String InformationType, String InfoMessage) {

@@ -2,6 +2,7 @@ package com.example.dbts;
 
 
 import android.Manifest;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -83,6 +84,9 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
     private boolean SuperUser = false;
     private MaterialButton ViewBusSchedules;
     ScholarData FinalScholarData ;
+    private boolean SavedInstanceFound = false;
+    private SharedPreferences sharedPreference_ScholarData;
+    private boolean MapLoaded = false;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -129,7 +133,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         originToCampusTime = view.findViewById(R.id.originToCampusTime);
         CampusToOriginTime = view.findViewById(R.id.CampustoOriginTime);
         ViewBusSchedules = view.findViewById(R.id.ViewBusSchedules);
-
+        sharedPreference_ScholarData = getContext().getSharedPreferences("ScholarData",getContext().MODE_PRIVATE);
         // Firebase Instances
         mAuth = FirebaseAuth.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -140,8 +144,8 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 
         // Code For floatingActionButton :
         floatingActionButton.setOnClickListener(v -> {
+            GettingThingsReady();
             floatingActionButton.animate().rotation(floatingActionButton.getRotation()-360).setDuration(2000).start();
-            Toast.makeText(getActivity(), String.valueOf(FinalScholarData.toString()), Toast.LENGTH_SHORT).show();
         });
 
         ViewBusSchedules.setOnClickListener(v->{
@@ -175,11 +179,10 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         FinalScholarData = FetchedScholarData;
     }
 
-
     private void SyncBusSchedule(int RouteNumber) {
         // Updating the Route Number of User
-        String RouteNumberText = BusRouteAutoCompleteTextView.getText().toString() + String.valueOf(RouteNumber);
-        BusRouteAutoCompleteTextView.setText(RouteNumberText);
+        String RouteNumberText = String.valueOf(RouteNumber);
+        BusRouteAutoCompleteTextView.setText("Route No. "+RouteNumberText);
 
 
         // Updating the originToCampusTime && CampusToOriginTime
@@ -207,6 +210,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
     }
 
     public void GettingThingsReady() {
+        if(!SavedInstanceFound){
         String UserDocumentID = null;
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
@@ -216,19 +220,31 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                     ScholarData CurrentScholarDataObj = documentSnapshot.toObject(ScholarData.class);
+                    SavedInstanceToLocalDB(CurrentScholarDataObj);
                     ApplyingDynamicChanges(CurrentScholarDataObj);
 
                 }
             });
         } else {
             Toast.makeText(getActivity(), "Sorry Unable to find the information... Try again later ", Toast.LENGTH_SHORT).show();
+        }}
+        else {
+           // When Data is Found in Local Database :
+
         }
+    }
+
+    private void SavedInstanceToLocalDB(ScholarData currentScholarDataObj) {
+        SharedPreferences.Editor shEditor = sharedPreference_ScholarData.edit();
+        shEditor.putString("RouteNumber","6");
+        shEditor.commit();
     }
 
 
     @Override
     public void onMapReady(@NonNull MapboxMap mapboxMap) {
         this.mapboxMap = mapboxMap;
+        MapLoaded = true;
         GettingThingsReady();
         mapboxMap.getUiSettings().setAttributionEnabled(false);
         mapboxMap.getUiSettings().setLogoEnabled(false);
@@ -238,7 +254,9 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
     public void onStart() {
         super.onStart();
         RequestPermissionsFromUser();
+        GettingThingsReady();
     }
+
 
     private void CameraPositionManagerLargeMap() {
         mapboxMap.setStyle(Style.MAPBOX_STREETS, new Style.OnStyleLoaded() {
@@ -256,40 +274,41 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 
     private void CameraPositionManagerMiniMap(double... Location) {
         RequestPermissionsFromUser();
-        mapboxMap.setStyle(Style.OUTDOORS, new Style.OnStyleLoaded() {
-            @Override
-            public void onStyleLoaded(@NonNull Style style) {
-                Point MyLocation = Point.fromLngLat(Location[0], Location[1]);
-                origin = MyLocation;
-                mFusedLocationProviderClient.getLastLocation().addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        Location location = task.getResult();
-                        CameraPosition position = new CameraPosition.Builder()
-                                .target(new LatLng(Location[0], Location[1]))
-                                .zoom(15)
-                                .tilt(1)
-                                .build();
-                        mapboxMap.animateCamera(CameraUpdateFactory.newCameraPosition(position), 2000);
-                        MarkerOptions markerOptions = new MarkerOptions();
-                        Point BusLocation = Point.fromLngLat(28.583333, 77.175797);
-                        List<Address> addresses;
-                        try {
-                            Geocoder geocoder = new Geocoder(getContext());
-                            addresses = geocoder.getFromLocationName("R K Puram", 1);
-                            if (addresses != null) {
-                                BusLocation = Point.fromLngLat(addresses.get(0).getLongitude(), addresses.get(0).getLatitude());
+        if(MapLoaded) {
+            mapboxMap.setStyle(Style.OUTDOORS, new Style.OnStyleLoaded() {
+                @Override
+                public void onStyleLoaded(@NonNull Style style) {
+                    Point MyLocation = Point.fromLngLat(Location[0], Location[1]);
+                    origin = MyLocation;
+                    mFusedLocationProviderClient.getLastLocation().addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            Location location = task.getResult();
+                            CameraPosition position = new CameraPosition.Builder()
+                                    .target(new LatLng(Location[0], Location[1]))
+                                    .zoom(15)
+                                    .tilt(1)
+                                    .build();
+                            mapboxMap.animateCamera(CameraUpdateFactory.newCameraPosition(position), 2000);
+                            MarkerOptions markerOptions = new MarkerOptions();
+                            Point BusLocation = Point.fromLngLat(28.583333, 77.175797);
+                            List<Address> addresses;
+                            try {
+                                Geocoder geocoder = new Geocoder(getContext());
+                                addresses = geocoder.getFromLocationName("R K Puram", 1);
+                                if (addresses != null) {
+                                    BusLocation = Point.fromLngLat(addresses.get(0).getLongitude(), addresses.get(0).getLatitude());
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
                             }
-                        } catch (IOException e) {
-                            e.printStackTrace();
+                            destination = BusLocation;
+                            markerOptions.position(new LatLng(MyLocation.longitude(), MyLocation.latitude()));
+                            mapboxMap.addMarker(markerOptions);
                         }
-                        destination = BusLocation;
-                        markerOptions.position(new LatLng(MyLocation.longitude(), MyLocation.latitude()));
-                        mapboxMap.addMarker(markerOptions);
-                    }
-                });
-            }
-        });
-
+                    });
+                }
+            });
+        }
     }
 
     private void RequestPermissionsFromUser() {

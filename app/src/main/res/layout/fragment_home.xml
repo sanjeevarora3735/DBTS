@@ -8,86 +8,85 @@
     android:theme="@style/Theme.DBTS.GetStarted"
     tools:context=".HomeFragment">
 
-    <LinearLayout
-        android:id="@+id/SecondaryConstraintLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:theme="@style/Theme.MaterialComponents.Light">
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/AppBarLayout"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ToolBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:elevation="1dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:background="@color/white"
+            android:minHeight="?actionBarSize"
+            android:paddingStart="0dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:theme="@style/AppTheme.PopupOverlay"
+            app:elevation="0dp">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/ToolBar"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:minHeight="?actionBarSize"
-                android:paddingStart="0dp"
-                android:scrollbarAlwaysDrawVerticalTrack="true"
-                android:theme="@style/AppTheme.PopupOverlay"
-                app:elevation="0dp">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/College_University_Logo"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="-40dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    android:src="@drawable/in_app_logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/College_University_Logo"
-                        android:layout_width="250dp"
-                        android:layout_height="60dp"
-                        android:layout_marginStart="-40dp"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:cropToPadding="true"
-                        android:padding="10dp"
-                        android:src="@drawable/in_app_logo"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <ImageButton
+                    android:id="@+id/SideBar"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:src="@drawable/bars"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageButton
-                        android:id="@+id/SideBar"
-                        android:layout_width="30dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="@color/white"
-                        android:src="@drawable/bars"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.appcompat.widget.Toolbar>
-        </com.google.android.material.appbar.AppBarLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/MainFrame"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="5dp">
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AppBarLayout">
+
 
             <com.google.android.material.circularreveal.cardview.CircularRevealCardView
                 android:id="@+id/circularRevealCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-
-                android:layout_marginTop="?actionBarSize"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="5dp"
                 app:cardBackgroundColor="@color/CardView"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="3dp"
@@ -111,6 +110,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
                         android:background="@drawable/cornerradius_cardview"
+                        android:clickable="false"
                         app:boxBackgroundMode="filled"
                         app:boxCornerRadiusBottomEnd="5dp"
                         app:boxCornerRadiusBottomStart="5dp"
@@ -120,17 +120,16 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:clickable="false"
                         app:startIconDrawable="@drawable/bus_front">
 
                         <AutoCompleteTextView
                             android:id="@+id/BusRouteAutoCompleteTextView"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:clickable="false"
                             android:dropDownHeight="150dp"
                             android:inputType="none"
                             android:maxLines="1"
-                            android:clickable="false"
                             android:text="Route No. "
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -206,7 +205,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/ViewBusSchedules"
                 android:layout_width="match_parent"
@@ -228,10 +226,13 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:layout_marginBottom="?actionBarSize"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ViewBusSchedules">
 
                 <com.google.android.material.circularreveal.cardview.CircularRevealCardView
                     android:id="@+id/MapCard"
@@ -254,7 +255,11 @@
                         <com.mapbox.mapboxsdk.maps.MapView
                             android:id="@+id/MapViewInstance"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
+                            android:layout_height="match_parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -264,19 +269,19 @@
                     android:id="@+id/BusRouteTextViewMap"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/mini_map"
-                    android:textSize="16sp"
-                    android:textColor="@color/white"
-                    android:translationZ="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
                     android:alpha=".9"
+                    android:background="@drawable/textview_map"
                     android:fontFamily="sans-serif-medium"
                     android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
                     android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
                     android:paddingBottom="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/textview_map"
+                    android:text="@string/mini_map"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:translationZ="1dp"
                     app:layout_constraintStart_toStartOf="@id/MapCard"
                     app:layout_constraintTop_toTopOf="@id/MapCard" />
 
@@ -294,10 +299,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/MapCard"
                     app:layout_constraintEnd_toEndOf="@+id/MapCard" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- App Bar Layout-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
