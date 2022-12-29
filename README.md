@@ -1,6 +1,6 @@
 # DBTS
 
-Hi Everyone, I'm sanjeev arora developer of this application. This application is developed to track the school and college buses and some extra features are also included :
+Hi Everyone, I'm sanjeev arora developer of this application as well as App-Dev Lead for the session 22-23. This application is developed to track the school and college buses and some extra features are also included :
 1. In-App Messaging 
 2. Live Tracking 
 3. Delay Status
@@ -66,7 +66,9 @@ This Application has the following UI Screens :
 
 #Request
 Apk Link : https://drive.google.com/file/d/1X3ARo5ih0Z0EryxcWaMLnca45yOE82mx/view?usp=share_link
-For Only-Viewing: login Details : Testcrook8@gmail.com ; Password : SampleUser
+For Only-Viewing: login Details : 
+    1.  Testcrook8@gmail.com  
+    2.  Password : SampleUser
 It is a open request to all please visit my app through the given link and let me know the bugs and errors for the same, also if you can do the same for the code .
 
 Thanks For Accepting the Request !!
