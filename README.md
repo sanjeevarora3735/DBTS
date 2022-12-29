@@ -65,6 +65,8 @@ This Application has the following UI Screens :
 
 
 #Request
+Apk Link : https://drive.google.com/file/d/1X3ARo5ih0Z0EryxcWaMLnca45yOE82mx/view?usp=share_link
+For Only-Viewing: login Details : Testcrook8@gmail.com ; Password : SampleUser
 It is a open request to all please visit my app through the given link and let me know the bugs and errors for the same, also if you can do the same for the code .
 
 Thanks For Accepting the Request !!
